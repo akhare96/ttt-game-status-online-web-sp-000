@@ -51,6 +51,7 @@ def winner(board)
     "X"
   elsif board[win_combo[0]] && board[win_combo[1]] && board[win_combo[2]] == "O"
     "O"
+  else
   end
   return nil
 end
