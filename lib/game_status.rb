@@ -46,12 +46,12 @@ def over?(board)
 end
 
 def winner(board)
-  win_combo = won?(board)
-  if board[win_combo[0]] && board[win_combo[1]] && board[win_combo[2]]== "X"
-    "X"
-  elsif board[win_combo[0]] && board[win_combo[1]] && board[win_combo[2]] == "O"
-    "O"
-  elsif !won?(board)
-    return nil
+    if won?(board)
+      return board[won?(board)[0]]
+#  win_combo = won?(board)
+#  if board[win_combo[0]] && board[win_combo[1]] && board[win_combo[2]]== "X"
+#    "X"
+#  elsif board[win_combo[0]] && board[win_combo[1]] && board[win_combo[2]] == "O"
+#    "O"
   end
 end
